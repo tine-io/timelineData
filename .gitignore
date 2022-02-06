@@ -1,0 +1,6 @@
+.venv/
+Takeout/
+playground.py
+/**/__pycache__
+.vscode
+.env
