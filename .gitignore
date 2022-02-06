@@ -4,3 +4,5 @@ playground.py
 /**/__pycache__
 .vscode
 .env
+loctaion_pb2.py
+loctaion_pb2_grpc.py

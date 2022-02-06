@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.location";
+option java_outer_classname = "LocationProto";
+option objc_class_prefix = "LOC";
+
+package location;
+
+// The greeting service definition.
+service Location {
+  // Sends a greeting
+  rpc GetLocationByTimestamp (LocationByTimestampReq) returns (LocationReply) {}
+}
+
+// The request message containing the user's name.
+message LocationByTimestampReq {
+  int32 timestamp = 1;
+}
+
+// The response message containing the greetings
+message LocationReply {
+  int32 lat = 1;
+  int32 long = 2;
+}
