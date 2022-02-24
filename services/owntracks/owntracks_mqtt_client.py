@@ -32,7 +32,7 @@ class OwntracksMqttClient():
         location['user'] = topics[1]
         location['tracker'] = topics[2]
         location['created_at'] = datetime.utcfromtimestamp(int(location['created_at']))
-        location['point'] = Point((float(location['lon']), float(location['lat'])))
+        location['point'] = Point(float(location['lat'])), (float(location['lon']))
         del location['lon'], location['lat']
         
         self.db_connector.insert_location(location)
